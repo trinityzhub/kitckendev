@@ -1,0 +1,6 @@
+ 
+https://github.com/winterheart/broadcom-bt-firmware/releases
+
+
+
+sudo rpm -i /workspace/kitchen/os/fedora/firmware/wifi/broadcom-bt-firmware-12.0.1.1105.rpm

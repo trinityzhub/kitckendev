@@ -1,0 +1,47 @@
+
+
+Accessing the X server requires two things:
+
+    The $DISPLAY variable pointing to the correct display (usually :0)
+    Proper authentication information
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+xhost + 
+
+
+
+
+
+
+
+
+
+
+
+
+env |grep DISPLAY
+DISPLAY=:0.0
+
+export DISPLAY=:0.0
+
+
+xhost +
+
+
+
+
+xhost +si:localuser:root

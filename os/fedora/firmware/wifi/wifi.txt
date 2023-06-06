@@ -1,0 +1,56 @@
+working
+
+
+https://www.reddit.com/r/linux4noobs/comments/wd1ltc/cant_install_broadcom_bcm43142_drivers_in_fedora/
+
+
+
+
+
+
+    check connected devices : command : lspci
+
+    download rpm fusiom packages command : sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm.noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm.noarch.rpm
+
+    sudo dnf update
+
+    download kl mod first command : sudo dnf install kmod-wl
+
+    sudo reboot
+
+    then remove broadcom wl
+
+command : dnf remove broadcom-wl
+
+7) dnf install b43-fwcutter
+
+8) setup firmware
+
+commands
+
+i) export FIRMWARE_INSTALL_DIR="/lib/firmware"
+
+ii) wget http://mirror2.openwrt.org/sources/broadcom-wl-5.10.56.27.3_mipsel.tar.bz2
+
+iii) tar xjf broadcom-wl-5.10.56.27.3_mipsel.tar.bz2
+
+iv) sudo b43-fwcutter -w "$FIRMWARE_INSTALL_DIR" broadcom-wl-5.10.56.27.3/driver/wl_apsta/wl_prebuilt.o
+
+9) sudo reboot
+
+10) download downgraded broadcom wl
+
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/releases/35/Everything/x86_64/os/Packages/b/broadcom-wl-6.30.223.271-17.fc35.noarch.rpm
+
+(OR)
+
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/releases/35/Everything/source/SRPMS/b/broadcom-wl-6.30.223.271-17.fc35.src.rpm
+
+11) sudo depmod ( to re-create the module dependency list )
+
+12) sudo modinfo wl
+
+13) sudo modprobe wl
+
+14) sudo reboot
+

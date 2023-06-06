@@ -1,0 +1,7 @@
+
+
+https://unix.stackexchange.com/questions/118811/why-cant-i-run-gui-apps-as-root-no-protocol-specified#answer-118826
+
+
+https://github.com/moby/moby/issues/18361
+
