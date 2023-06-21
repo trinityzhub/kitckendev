@@ -1,0 +1,3 @@
+[submodule "dockerkitchen/research/security/docker-bench-security"]
+	path = dockerkitchen/research/security/docker-bench-security
+	url = https://github.com/trinityzhub/docker-bench-security.git
